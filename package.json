@@ -1,18 +1,20 @@
 {
-  "name": "vue-chat",
+  "name": "vue-bill",
   "version": "1.0.0",
-  "description": "chat example by vue.js + webpack",
+  "description": "vue.js + webpack + wildodg",
   "scripts": {
     "dev": "webpack-dev-server --hot --inline",
     "build": "webpack -p"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Coffcer/vue-chat.git"
+    "url": "git+https://github.com/xinnix/vue-bill.git"
   },
   "dependencies": {
+    "moment": "^2.12.0",
     "vue": "^1.0.10",
-    "vux": "0.0.92"
+    "vux": "0.0.92",
+    "wilddog": "^0.6.1"
   },
   "devDependencies": {
     "autoprefixer-loader": "^2.0.0",

@@ -1,7 +1,7 @@
 <template>
 
 <group title="账户余额">
-    <p :class="[total>0?pos:neg]">{{total}}</p>
+    <p :class="[total>0?style.pos:style.neg]">{{total}}</p>
 </group>
 </template>
 
@@ -11,8 +11,10 @@ export default {
   props:['total'],
   data(){
     return {
-      pos:'pos',
-      neg:'neg'
+      style:{
+        pos:'pos',
+        neg:'neg'
+      }
     }
   },
   components:{
@@ -23,14 +25,14 @@ export default {
 
 <style scoped>
 .neg {
-  padding: 1em;
+  padding-left: 0.5em;
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
   font-size: 3em;
   color: #04BE02;
   background-color: #ffffff;
 }
 .pos{
-  padding: 1em;
+  padding-left: 0.5em;
   font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
   font-size: 3em;
   color: #ff2400;

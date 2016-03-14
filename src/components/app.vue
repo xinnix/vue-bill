@@ -1,53 +1,18 @@
 <script>
     import store from '../store';
-    import card from './card';
-    import list from './list';
-    import text from './text';
-    import we from './we';
     import balance from './balance';
-    import message from './message';
-  import records from './records';
+    import records from './records';
     import addbar from './addbar';
+
+
+
     export default {
-        el: '#chat',
+        el: '#app',
         data () {
-            let serverData = store.fetch();
-
             return {
-                // 登录用户
-                user: serverData.user,
-                // 用户列表
-                userList: serverData.userList,
-                // 会话列表
-                sessionList: serverData.sessionList,
-                // 搜索key
-                search: '',
-                // 选中的会话Index
-                sessionIndex: 0,
-                recordsVal:[
-                  {type:'支出',count:1000,date:'2016-10-1',memo:'hello world'},
-                  {type:'收入',count:300,date:'2016-10-2',memo:'hello world'}
-                ]
-
+                items:[],
+                total:0
             };
-        },
-        computed: {
-            session () {
-                return this.sessionList[this.sessionIndex];
-            }
-        },
-        watch: {
-            // 每当sessionList改变时，保存到localStorage中
-            sessionList: {
-                deep: true,
-                handler () {
-                    store.save({
-                        user: this.user,
-                        userList: this.userList,
-                        sessionList: this.sessionList
-                    });
-                }
-            }
         },
         components: {
             balance,records,addbar
@@ -58,9 +23,9 @@
 
 <template>
     <div>
-      <balance :total="-1000"></balance>
-      <addbar></addbar>
-      <records :items="recordsVal"></records>
+      <balance :total="total"></balance>
+      <addbar  :total="total"></addbar>
+      <records :items="items"></records>
         <!-- <div class="sidebar">
             <card :user="user" :search.sync="search"></card>
             <list :user-list="userList" :session="session" :session-index.sync="sessionIndex" :search="search"></list>

@@ -1,8 +1,5 @@
-# Chat by Vue + Webpack
+# Bill by Vue + Webpack
 
-[Live demo](http://coffcer.github.io/vue-chat/)
-
-<img width="600" height="400" src="http://coffcer.github.io/vue-chat/dist/images/intro.jpg">
 
 ### Setup
 
