@@ -1,5 +1,4 @@
 <script>
-    import store from '../store';
     import balance from './balance';
     import records from './records';
     import addbar from './addbar';

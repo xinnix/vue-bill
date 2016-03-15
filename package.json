@@ -4,7 +4,7 @@
   "description": "vue.js + webpack + wildodg",
   "scripts": {
     "dev": "webpack-dev-server --hot --inline",
-    "build": "webpack -p"
+    "build": "NODE_ENV=production webpack --progress --hide-modules"
   },
   "repository": {
     "type": "git",
