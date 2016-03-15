@@ -4,9 +4,13 @@
   </template> -->
   <group  title="收支记录">
       <cell v-for="item in items" :title="item.memo+'/'+item.date">
+    <!-- <ul v-for="item in items"> -->
+        <!-- <li> -->
         <div slot="value">
-          <span :class="[item.count>0?style.pos:style.neg]">{{item.count}}</span>
+          <span :class="[item.balance=='收入'?style.pos:style.neg]">{{item.balance+' '+item.count}}</span>
         </div>
+      <!-- </li> -->
+    <!-- </ul> -->
       </cell>
   </group>
   </template>

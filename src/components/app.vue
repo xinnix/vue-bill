@@ -5,7 +5,6 @@
     import addbar from './addbar';
 
 
-
     export default {
         el: '#app',
         data () {
